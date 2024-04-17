@@ -5,16 +5,12 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Home, VisitorPage } from "./components";
+import App from "./App";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <VisitorPage />,
-  },
-  {
-    path: "/home",
-    element: <Home />,
+    element: <App />,
   },
 ]);
 
