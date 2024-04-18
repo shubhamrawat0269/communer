@@ -1,6 +1,13 @@
-export const SignUpButton = ({ icon, iconType, label }) => {
+export const SignUpButton = ({ icon, iconType, label, onBtnClicked }) => {
+  const handleBtnClicked = () => {
+    onBtnClicked();
+  };
+
   return (
-    <button className="w-42 bg-yellow-400 flex items-center justify-around py-2 px-3">
+    <button
+      className="w-96 bg-yellow-400 flex gap-2 items-center justify-center py-2 px-3"
+      onClick={handleBtnClicked}
+    >
       <span>
         <img src={icon} className="w-3" alt={iconType} />
       </span>
@@ -11,7 +18,10 @@ export const SignUpButton = ({ icon, iconType, label }) => {
 
 export const UserLoginButton = ({ label }) => {
   return (
-    <button className="w-96 bg-neutral-500 flex items-center justify-around py-2 px-3">
+    <button
+      type="submit"
+      className="w-96 bg-neutral-500 flex items-center justify-around py-2 px-3"
+    >
       {label}
     </button>
   );
