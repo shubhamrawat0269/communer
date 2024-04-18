@@ -1,23 +1,18 @@
-export const SignUpButton = ({ id, icon, iconType, label }) => {
-  const handleSignup = () => {
-    console.log(label);
-    if (label == "Sign Up With Gmail") {
-      console.log("A");
-    } else if (label == "Sign In With Gmail") {
-      console.log("B");
-    }
-  };
-
+export const SignUpButton = ({ icon, iconType, label }) => {
   return (
-    <button
-      key={id}
-      onClick={handleSignup}
-      className="w-72 flex items-center justify-around py-4 px-5 border rounded-3xl"
-    >
+    <button className="w-42 bg-yellow-400 flex items-center justify-around py-2 px-3">
       <span>
-        <img src={icon} className="w-6" alt={iconType} />
+        <img src={icon} className="w-3" alt={iconType} />
       </span>
       <span className="text-left">{label}</span>
+    </button>
+  );
+};
+
+export const UserLoginButton = ({ label }) => {
+  return (
+    <button className="w-96 bg-neutral-500 flex items-center justify-around py-2 px-3">
+      {label}
     </button>
   );
 };

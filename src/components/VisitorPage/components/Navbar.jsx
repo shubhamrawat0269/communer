@@ -10,7 +10,7 @@ const Navbar = () => {
         </h1>
       </div>
       <div className="flex justify-center items-center gap-4">
-        <Link to="/signup">
+        <Link to="/login">
           <button className="">Sign In</button>
         </Link>
         <button className="bg-neutral-800 text-white px-4 py-2 rounded-md">
